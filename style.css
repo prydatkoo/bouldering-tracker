@@ -23,6 +23,30 @@ h1 {
   color: var(--header-text-colour);
 }
 
+.WIP-h1,
+.WIP-h2 {
+  text-align: center;
+  margin: 0;
+  padding: 0 20%;
+  font-size: xx-large;
+}
+
+.wip-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.WIP-h1{
+    color:var(--primary-colour);
+}
+
+.WIP-h2{
+    color: var(--third-colour);
+}
+
 h3 {
   color: var(--text-secondary-colour);
 }
@@ -85,9 +109,9 @@ h3 {
     max-width: 500px;
   }
 }
-  .about-us-p {
-    padding: 0% 10%;
-  }
+.about-us-p {
+  padding: 0% 10%;
+}
 
 /* Phones */
 @media (max-width: 768px) {
