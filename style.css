@@ -67,13 +67,36 @@ h1 {
 .hero {
   display: flex;
   align-items: center;
+  font-size: x-large;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.button-hero {
+  text-decoration: none;
+  background-color: var(--third-colour);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10.5px;
+  align-self: center;
+}
+
+.button-hero:hover {
+  background-color: var(--primary-colour);
+  color: black;
+  border-radius: 10.5px;
+}
+
+.hero-text-h3{
+    font-family: var(--font-mono);
+    font-size: medium;
 }
 /* ----- */
 
@@ -122,9 +145,12 @@ h1 {
     width: 100%;
     max-width: 500px;
   }
-}
-.about-us-p {
-  padding: 0% 10%;
+  .about-us-p {
+    padding: 0% 10%;
+  }
+  .hero-text {
+    padding: 0px;
+  }
 }
 
 /* Phones */
@@ -141,6 +167,7 @@ h1 {
   .hero-text {
     align-items: center;
     text-align: center;
+    padding: 0% 10%;
   }
   .about-us-p {
     padding: 0% 5%;
