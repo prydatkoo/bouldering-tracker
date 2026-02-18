@@ -1,11 +1,34 @@
+:root{
+    --primary-colour: #04b36b;
+    --secondary-colour: #006d86;
+    --third-colour: #145144;
+    --bg-colour-primary: #1A1A2E;
+    --header-text-colour: #f0edffcc;
+    --text-secondary-colour: #787698;
+}
+
+body{
+    background-color: var(--bg-colour-primary);
+}
+
+h1{
+    color:var(--header-text-colour);
+}
+
+h3{
+    color: var(--text-secondary-colour);
+}
+
+a{
+    
+}
 
 
-
-/*Phones*/
+/* Phones
 @media(max-width: 1023px){
 
 }
-/*Tablets*/ 
+Tablets
 @media(max-width: 768px){
 
-}
+} */
