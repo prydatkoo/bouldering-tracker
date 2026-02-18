@@ -82,7 +82,7 @@ h1 {
 .button-hero {
   text-decoration: none;
   background-color: var(--third-colour);
-  color: black;
+  color: var(--header-text-colour);
   padding: 10px 20px;
   border-radius: 10.5px;
   align-self: center;
