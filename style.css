@@ -27,13 +27,22 @@ h3 {
   color: var(--text-secondary-colour);
 }
 
+.about-us-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-secondary-colour);
+  padding: 0% 20%;
+  font-size: xx-large;
+}
+
 .topnav {
   background-color: var(--bg-colour-secondary);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
-  padding: 10px;
+  padding: 10px 0px;
   width: 100%;
   font-family: var(--font-mono);
   border-radius: 10.5px;
@@ -69,14 +78,18 @@ h3 {
   align-items: flex-start;
 }
 
-/* Phones */
+/* Tablets */
 @media (max-width: 1023px) {
   .logo {
     width: 100%;
     max-width: 500px;
   }
 }
-/* Tablets */
+  .about-us-p {
+    padding: 0% 10%;
+  }
+
+/* Phones */
 @media (max-width: 768px) {
   .logo {
     width: 100%;
@@ -90,5 +103,8 @@ h3 {
   .hero-text {
     align-items: center;
     text-align: center;
+  }
+  .about-us-p {
+    padding: 0% 5%;
   }
 }
