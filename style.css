@@ -1,28 +1,64 @@
-:root{
-    --primary-colour: #04b36b;
-    --secondary-colour: #006d86;
-    --third-colour: #145144;
-    --bg-colour-primary: #1A1A2E;
-    --header-text-colour: #f0edffcc;
-    --text-secondary-colour: #787698;
+:root {
+  --primary-colour: #04b36b;
+  --secondary-colour: #006d86;
+  --third-colour: #145144;
+  --bg-colour-primary: #1a1a2e;
+  --bg-colour-secondary: #303054;
+  --header-text-colour: #f0edffcc;
+  --text-secondary-colour: #787698;
 }
 
-body{
-    background-color: var(--bg-colour-primary);
+body {
+  background-color: var(--bg-colour-primary);
 }
 
-h1{
-    color:var(--header-text-colour);
+h1 {
+  color: var(--header-text-colour);
 }
 
-h3{
-    color: var(--text-secondary-colour);
+h3 {
+  color: var(--text-secondary-colour);
 }
 
-a{
-    
+.topnav {
+  background-color: var(--bg-colour-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 10px;
+  border-radius: 10.5px;
 }
 
+.topnav a {
+  color: var(--secondary-colour);
+  text-decoration: none;
+  padding: 6px 10px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 10.5px;
+}
+
+.topnav a.active {
+  background-color: var(--text-secondary-colour);
+  color: white;
+  border-radius: 10.5px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 
 /* Phones
 @media(max-width: 1023px){
