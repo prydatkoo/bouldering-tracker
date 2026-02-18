@@ -6,10 +6,16 @@
   --bg-colour-secondary: #303054;
   --header-text-colour: #f0edffcc;
   --text-secondary-colour: #787698;
+  --font-display: "VT323", monospace;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
 }
 
 body {
   background-color: var(--bg-colour-primary);
+  font-family: var(--font-display);
 }
 
 h1 {
@@ -28,6 +34,7 @@ h3 {
   gap: 16px;
   padding: 10px;
   border-radius: 10.5px;
+  font-family: var(--font-mono);
 }
 
 .topnav a {
