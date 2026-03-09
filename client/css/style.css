@@ -16,6 +16,10 @@
 }
 /* ----- */
 
+*,*::before, *::after{
+  letter-spacing: 1px;
+}
+
 body {
   background-color: var(--bg-colour-primary);
   font-family: var(--font-display);
@@ -137,6 +141,92 @@ h1 {
 }
 /* ----- */
 
+/* HOME Climbs Panel*/
+.climbs-home {
+  max-width: 720px;
+  margin:24px auto;
+  padding:20px;
+  border: 1px solid var(--text-third-colour);
+  border-radius: 14px;
+  background-color: var(--text-secondary-colour);
+}
+
+.home-title{
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+.climbs-home h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 0 0 16px 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.climb-form{
+  display:grid;
+  grid-template-columns: 1fr 140px auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.climb-form input{
+  padding: 10px;
+  border-radius: 10px;
+  border:1px solid var(--text-third-colour);
+  color: var(--text-secondary-colour);
+  font-family: var(--font-mono);
+  background: var(--header-text-colour);
+}
+
+.climb-form input::placeholder{
+  color: var(--text-secondary-colour);
+}
+
+.climb-list{
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.climb-list li {
+  padding: 10px 12px;
+  border-radius:10px;
+  border: 1px solid var(--text-third-colour);
+  color: var(--header-text-colour);
+  font-family: var(--font-mono);
+}
+
+.climb-form select{
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--text-secondary-colour);
+  font-family: var(--font-mono);
+  background-color: var(--header-text-colour);
+}
+
+.grade-badge {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-family: var(--font-mono);
+  color: #fff;
+}
+
+
+.grade-green { background: #2e9f57; color: #fff; }
+.grade-yellow { background: #e6c84f; color: #1a1a1a; }
+.grade-blue { background: #2f6fcc; color: #fff; }
+.grade-red { background: #c43c3c; color: #fff; }
+.grade-grey { background: #8b8f98; color: #111; }
+.grade-black { background: #222; color: #fff; }
+.grade-default { background: #555; color: #fff; }
+/* ----- */
+
 /* MEDIA QUERIES */
 
 /* Tablets */
@@ -171,5 +261,9 @@ h1 {
   }
   .about-us-p {
     padding: 0% 5%;
+  }
+
+  .climb-form{
+    grid-template-columns: 1fr;
   }
 }
