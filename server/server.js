@@ -1,8 +1,15 @@
 const http = require("http");
 const fs = require("fs");
+const _ = require("lodash");
+
+const logOnce = _.once(() => {
+  console.log("---Server received its first request---");
+});
 
 const server = http.createServer((req, res) => {
   let contentType = "text/html";
+
+  logOnce();
 
   console.log(req.url, req.method);
 

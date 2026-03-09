@@ -3,3 +3,7 @@
 
 # Editor settings
 .vscode/
+
+nodeBasics/
+
+server/node_modules/
