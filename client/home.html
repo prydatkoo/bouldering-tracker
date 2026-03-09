@@ -14,10 +14,36 @@
 </head>
 
 <body>
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./about.html"> About Dyno! </a>
+        <a href="./WIP.html">Sign in</a>
+        <a href="./home.html" class="active">Track!</a>
+    </div>
+
     <main>
-        <h1>Welcome Back!</h1>
-        <a href="" class="button-hero track-button">Track a new climb!</a>
+        <h1 class="home-title">Welcome Back!</h1>
+        <div class="climbs-home">
+            <h2>Track Your Climb!</h2>
+            <form id="climb-form" class="climb-form">
+                <input name="name" placeholder="Climb Name" required />
+                <select name="grade" required>
+                    <option value="">Select grade</option>
+                    <option value="V1 / Green">V1 / Green</option>
+                    <option value="V2 / Yellow">V2 / Yellow</option>
+                    <option value="V3 / Blue">V3 / Blue</option>
+                    <option value="V4 / Red">V4 / Red</option>
+                    <option value="V5 / Grey">V5 / Grey</option>
+                    <option value="V6 / Black">V6 / Black</option>
+                </select>
+                <button type="submit" class="button-hero">Add climb</button>
+            </form>
+
+            <ul id="climb-list" class="climb-list"></ul>
+        </div>
     </main>
 </body>
+
+<script src="/js/home.js"></script>
 
 </html>
