@@ -3,6 +3,7 @@ const router = express.Router();
 const {
   getAllClimbs,
   createClimb,
+  getClimbById,
   updateClimb,
 } = require("../models/climbs.models");
 
@@ -19,7 +20,7 @@ router.get("/climbs/new", async (req, res, next) => {
   res.render("climbs/new");
 });
 
-router.get("/clibs/:id/edit", async (req, res, next) => {
+router.get("/climbs/:id/edit", async (req, res, next) => {
   try {
     const id = Number(req.params.id);
     const climb = await getClimbById(id);
@@ -46,13 +47,13 @@ router.put("/climbs/:id", async (req, res, next) => {
   try {
     const id = Number(req.params.id);
     const { name, grade } = req.body;
-    if (!name || !grade) {
+    if (!name || !grade)
       return res.status(400).send("Name and grade are required");
-    }
+
     const updated = await updateClimb(id, name, grade);
-    if (!updated) return updateClimb(id, name, grade);
     if (!updated) return res.status(404).send("Climb not found");
-    res.redirect("climbs");
+
+    res.redirect("/climbs");
   } catch (err) {
     next(err);
   }
