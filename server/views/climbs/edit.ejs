@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Climb</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/about"> About Dyno! </a>
+        <a href="/WIP">Sign in</a>
+        <a href="/climbs" class="active">Track!</a>
+    </div>
+
+    <main class="climbs-home">
+        <h1 class="home-title">Edit Climb</h1>
+        <form action="/climbs/<%= climb.id %>?_method=PUT" method="POST" class="climb-form">
+            <input name="name" value="<%= climb.name %>" required />
+            <select name="grade" required>
+                <option value="V1 / Green" <%=climb.grade==="V1 / Green" ? "selected" : "" %>>V1 / Green</option>
+                <option value="V2 / Yellow" <%=climb.grade==="V2 / Yellow" ? "selected" : "" %>>V2 / Yellow</option>
+                <option value="V3 / Blue" <%=climb.grade==="V3 / Blue" ? "selected" : "" %>>V3 / Blue</option>
+                <option value="V4 / Red" <%=climb.grade==="V4 / Red" ? "selected" : "" %>>V4 / Red</option>
+                <option value="V5 / Grey" <%=climb.grade==="V5 / Grey" ? "selected" : "" %>>V5 / Grey</option>
+                <option value="V6 / Black" <%=climb.grade==="V6 / Black" ? "selected" : "" %>>V6 / Black</option>
+            </select>
+            <button type="submit" class="button-hero">Update</button>
+        </form>
+        <p><a href="/climbs">Back to climbs</a></p>
+    </main>
+</body>
+
+</html>
