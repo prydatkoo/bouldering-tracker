@@ -47,6 +47,9 @@
                                         <%= c.grade %>
                                     </span>
                                     <a href="/climbs/<%= c.id %>/edit">Edit</a>
+                                    <form action="/climbs/<%= c.id %>?_method=DELETE" method="POST"
+                                        class="inline-action-form"> <button type="submit"
+                                            class="delete-action">Delete</button> </form>
                                 </li>
                                 <% }) %>
                     </ul>
