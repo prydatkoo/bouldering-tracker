@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Climb</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/about">About Dyno!</a>
+        <a href="/WIP">Sign in</a>
+        <a href="/climbs" class="active">Track!</a>
+    </div>
+
+    <main class="climbs-home">
+        <h1 class="home-title">Add a climb</h1>
+        <form action="/climbs" method="POST" class="climb-form">
+            <input name="name" placeholder="Climb name" required />
+            <select name="grade" required>
+                <option value="">Select grade</option>
+                <option value="V1 / Green">V1 / Green</option>
+                <option value="V2 / Yellow">V2 / Yellow</option>
+                <option value="V3 / Blue">V3 / Blue</option>
+                <option value="V4 / Red">V4 / Red</option>
+                <option value="V5 / Grey">V5 / Grey</option>
+                <option value="V6 / Black">V6 / Black</option>
+            </select>
+            <button type="submit" class="button-hero">Save</button>
+        </form>
+        <p><a href="/climbs">Back to climbs</a></p>
+    </main>
+</body>
+
+<body>
+
+</body>
+
+</html>
