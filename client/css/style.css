@@ -242,6 +242,33 @@ h1 {
   background-color: var(--header-text-colour);
 }
 
+.inline-action-form {
+margin-left: 8px;
+}
+
+.delete-action {
+border: 1px solid transparent;
+background: #7a1f2b;
+color: #fff;
+border-radius: 10.5px;
+padding: 6px 10px;
+font-family: var(--font-mono);
+font-size: 0.85rem;
+cursor: pointer;
+line-height: 1;
+}
+
+.delete-action:hover {
+background: #c43c3c;
+color: #111;
+}
+
+.delete-action:focus-visible {
+outline: none;
+border-color: var(--header-text-colour);
+box-shadow: 0 0 0 2px rgba(240, 237, 255, 0.35);
+}
+
 .grade-badge {
   margin-left: 8px;
   padding: 2px 8px;
