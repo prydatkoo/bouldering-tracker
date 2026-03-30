@@ -15,4 +15,4 @@ async function createClimb(name, grade) {
   return result.rows[0];
 }
 
-module.exports = { getAllClimbs };
+module.exports = { getAllClimbs, createClimb };
