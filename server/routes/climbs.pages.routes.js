@@ -5,7 +5,7 @@ const { getAllClimbs } = require("../models/climbs.models");
 router.get("climbs", async (req, res, next) => {
   try {
     const climbs = await getAllClimbs();
-    res.render("climbs/index", { climbs });
+    res.render("/climbs/index", { climbs });
   } catch (err) {
     next(err);
   }
