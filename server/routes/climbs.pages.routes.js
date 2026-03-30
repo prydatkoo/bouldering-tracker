@@ -5,6 +5,7 @@ const {
   createClimb,
   getClimbById,
   updateClimb,
+  deleteClimb,
 } = require("../models/climbs.models");
 
 router.get("/climbs", async (req, res, next) => {
@@ -53,6 +54,17 @@ router.put("/climbs/:id", async (req, res, next) => {
     const updated = await updateClimb(id, name, grade);
     if (!updated) return res.status(404).send("Climb not found");
 
+    res.redirect("/climbs");
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.delete("/climbs/:id", async (req, res, next) => {
+  try {
+    const id = Number(req.params.id);
+    const deleted = await deleteClimb(id);
+    if (!deleted) return res.status(404).send("Climb not found");
     res.redirect("/climbs");
   } catch (err) {
     next(err);
