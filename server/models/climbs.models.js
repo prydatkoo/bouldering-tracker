@@ -28,7 +28,7 @@ async function updateClimb(id, name, grade) {
     "UPDATE climbs SET name = $2, grade = $3 WHERE id = $1 RETURNING id, name, grade, created_at",
     [id, name, grade],
   );
-  return result.rows;
+  return result.rows[0];
 }
 
 module.exports = { getAllClimbs, createClimb, getClimbById, updateClimb };
