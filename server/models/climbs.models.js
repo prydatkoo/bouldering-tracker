@@ -15,4 +15,16 @@ async function createClimb(name, grade) {
   return result.rows[0];
 }
 
+async function getClimbById(id) {
+  const result = await query("SELECT one row by id");
+  return result.rows[0];
+}
+
+async function updateClimb(id, name, grade) {
+  const result = await query(
+    "UPDATE climbs SET name=$2, grade=$3, WHERE id=$1 RETURNING *",
+  );
+  return result.rows;
+}
+
 module.exports = { getAllClimbs, createClimb };
