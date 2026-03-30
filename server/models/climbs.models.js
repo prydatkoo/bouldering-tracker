@@ -31,4 +31,17 @@ async function updateClimb(id, name, grade) {
   return result.rows[0];
 }
 
-module.exports = { getAllClimbs, createClimb, getClimbById, updateClimb };
+async function deleteClimb(id) {
+  const result = await query("DELETE FROM climbs WHERE id = $1 RETURNING id", [
+    id,
+  ]);
+  return result.rows[0];
+}
+
+module.exports = {
+  getAllClimbs,
+  createClimb,
+  getClimbById,
+  updateClimb,
+  deleteClimb,
+};
