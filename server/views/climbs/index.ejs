@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Climbs</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,24 +12,46 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=IBM+Plex+Mono:wght@400;600&family=VT323&display=swap"
         rel="stylesheet" />
 </head>
-<h1>Climbs from Database</h1>
-<p><a href="/climbs/new" class="button-hero">Add climb</a></p>
-<% if (!climbs.length) { %>
-    <p> No climbs yet.</p>
-    <% } %>
 
-        <ul>
-            <% climbs.forEach((c)=> {%>
-                <li>
-                    <strong>
-                        <%= c.name %>
-                    </strong> - <%= c.grade %>
-                </li>
-                <% }) %>
-        </ul>
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/about"> About Dyno! </a>
+        <a href="/WIP">Sign in</a>
+        <a href="/climbs" class="active">Track!</a>
+    </div>
 
-        <body>
+    <main>
+        <h1 class="home-title">Welcome Back!</h1>
 
-        </body>
+        <div class="climbs-home">
+            <h2>Track Your Climb!</h2>
+
+            <p>
+                <a href="/climbs/new" class="button-hero">Add climb</a>
+            </p>
+
+            <% if (!climbs.length) { %>
+                <p>No climbs yet.</p>
+                <% } else { %>
+                    <ul class="climb-list">
+                        <% climbs.forEach((c)=> { %>
+                            <% const gradeMap={ "V1 / Green" : "grade-green" , "V2 / Yellow" : "grade-yellow"
+                                , "V3 / Blue" : "grade-blue" , "V4 / Red" : "grade-red" , "V5 / Grey" : "grade-grey"
+                                , "V6 / Black" : "grade-black" }; %>
+                                <li>
+                                    <strong>
+                                        <%= c.name %>
+                                    </strong>
+                                    <span class="grade-badge <%= gradeMap[c.grade] || 'grade-default' %>">
+                                        <%= c.grade %>
+                                    </span>
+                                </li>
+                                <% }) %>
+                    </ul>
+                    <% } %>
+        </div>
+    </main>
+</body>
 
 </html>
