@@ -90,6 +90,8 @@ h1 {
   padding: 10px 20px;
   border-radius: 10.5px;
   align-self: center;
+  font-size: large;
+  font-family: var(--font-mono);
 }
 
 .button-hero:hover {
@@ -193,11 +195,43 @@ h1 {
 }
 
 .climb-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   padding: 10px 12px;
   border-radius:10px;
   border: 1px solid var(--text-third-colour);
   color: var(--header-text-colour);
   font-family: var(--font-mono);
+}
+
+.climb-list li .grade-badge {
+  margin-left: 0;
+}
+
+.climb-list li a {
+  margin-left: auto;
+  text-decoration: none;
+  background-color: var(--third-colour);
+  color: var(--header-text-colour);
+  border: 1px solid transparent;
+  padding: 6px 10px;
+  border-radius: 10.5px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.climb-list li a:hover {
+  background-color: var(--primary-colour);
+  color: #111;
+}
+
+.climb-list li a:focus-visible {
+  outline: none;
+  border-color: var(--header-text-colour);
+  box-shadow: 0 0 0 2px rgba(240, 237, 255, 0.35);
 }
 
 .climb-form select{
@@ -265,5 +299,13 @@ h1 {
 
   .climb-form{
     grid-template-columns: 1fr;
+  }
+
+  .climb-list li {
+    align-items: flex-start;
+  }
+
+  .climb-list li a {
+    margin-left: 0;
   }
 }
