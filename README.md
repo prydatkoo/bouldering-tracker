@@ -17,9 +17,9 @@
 Bouldering session logger, which allows users to log their climbing
 sessions, track their progress for now. In the future share their achievements with friends.
 The application is built in pure CSS/HTML/JS with the use of dynamic routing.
-App is kept leightweight on purpose, to make it as responsive as possible 
+App is kept lightweight on purpose, to make it as responsive as possible 
 without any bloat. Currently only logging climbs is implemented, and 
-features like account authentification or sessions are not currently implemented.
+features like account authentication or sessions are not currently implemented.
 
 BUT:
 
@@ -49,7 +49,7 @@ Hosting / Deployment:
 
 ### Core
 
-- Log a climb (name, graade)
+- Log a climb (name, grade)
 - Delete your climbs
 - Edit your climbs
 
@@ -77,7 +77,7 @@ Open terminal and then in terminal type `cd server`.
 Then we have to install node modules using `npm install` 
 to be able to use server before running it.
 Afterwards, we have to set up env variables in .env(which you have to make using .env.example),
-and .env should never be commited(it is in .gitignore). Where you have to set your DATABASE_URL,
+and .env should never be committed(it is in .gitignore). Where you have to set your DATABASE_URL,
 to be able to use database.
 Finally, use npm run dev to make server run on localhost
 
@@ -88,5 +88,5 @@ Install PostgreSQL locally, or using hosted one works as well(just copy the exte
 If the database is not created, then create one and run a schema(server/migrations/001_create_climbs.sql) 
 once to set up database for usage.
 
-DONT forget to update your .env, if you are running database locally. usually `postgresql://USER@localhost:PORT/DATABASENAME`
+DON'T forget to update your .env, if you are running database locally. usually `postgresql://USER@localhost:PORT/DATABASENAME`
 If the database is not working, then you have to set `?sslmode=require` in the end of the url. which is required by many cloud providers
