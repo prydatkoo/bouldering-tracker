@@ -19,9 +19,9 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use("/", pagesRouter);
 app.use("/", climbsPagesRouter);
-app.use("/api/climbs", climbsRouter);
+app.use("/", climbsRouter);
 
-app.use((req, res) => {
+app.use((_req, res) => {
   res.status(404).sendFile(path.join(__dirname, "../client/WIP.html"));
 });
 
