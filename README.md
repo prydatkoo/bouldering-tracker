@@ -3,9 +3,11 @@
 ## Table of contents
 
 - [About](#about)
+- [Tech Stack](#tech-stack)
 - [Features](#features)
 - [API](#api)
-- [TODO](#todo)
+- [Run](#run-locally)
+
 
 ## About
 
