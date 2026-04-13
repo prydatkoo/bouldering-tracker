@@ -7,6 +7,7 @@
 - [Features](#features)
 - [API](#api)
 - [Run](#run-locally)
+- [Set up Database](#set-up-the-database)
 
 
 ## About
