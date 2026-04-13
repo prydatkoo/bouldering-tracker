@@ -16,7 +16,7 @@
 Bouldering session logger, which allows users to log their climbing
 sessions, track their progress for now. In the future share their achievements with friends.
 The application is built in pure CSS/HTML/JS with the use of dynamic routing.
-App is kept leightweight on purpose, to makeit as responsive as possible 
+App is kept leightweight on purpose, to make it as responsive as possible 
 without any bloat. Currently only logging climbs is implemented, and 
 features like account authentification or sessions are not currently implemented.
 
@@ -55,8 +55,8 @@ Hosting / Deployment:
 ### Usage of CRUD
 - List: `GET /climbs`
 - New: `GET /climbs/new` and `POST /climbs`
-- Edit: `GEt /climbs/:id/edit` and `PUT /climbs/:id`
--Delete: `DELETE /climbs/:id`
+- Edit: `GET /climbs/:id/edit` and `PUT /climbs/:id`
+- Delete: `DELETE /climbs/:id`
 
 
 
