@@ -80,4 +80,12 @@ and .env should never be commited(it is in .gitignore). Where you have to set yo
 to be able to use database.
 Finally, use npm run dev to make server run on localhost
 
+## Set up the Database
 
+Install PostgreSQL locally, or using hosted one works as well(just copy the external url).
+
+If the database is not created, then create one and run a schema(server/migrations/001_create_climbs.sql) 
+once to set up database for usage.
+
+DONT forget to update your .env, if you are running database locally. usually `postgresql://USER@localhost:PORT/DATABASENAME`
+If the database is not working, then you have to set `?sslmode=require` in the end of the url. which is required by many cloud providers
